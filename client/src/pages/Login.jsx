@@ -1,10 +1,13 @@
 import {useState} from 'react'
-
+import axios from 'axios';
 function Login() {
     const[username,setUsername]=useState('');
     const[password,setPassword]=useState('');
     function login(ev){
         ev.preventDefault();
+        axios.post('http://localhost:4000/login',{usernameOrEmail:username,password}).then((res)=>{
+            console.log(res)
+        })
 
     }
   return (
