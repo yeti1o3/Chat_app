@@ -6,5 +6,5 @@ router.post('/signup',signup);
 router.post('/login',login);
 
 router.post('/logout',logout);
-
+//auth route
 export default router;
