@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from 'axios'
+import '../styles/Register.css'
 function Register(){
     const[name,setName]=useState('');
     const[email,setEmail]=useState('');
@@ -15,7 +16,7 @@ function Register(){
         })
     }
     return(
-        <>
+        <div className="Register">
         <h2>Register</h2>
         <form onSubmit={register}>
         <input placeholder="name" value={name} onChange={(e)=>{setName(e.target.value)}}/>
@@ -26,7 +27,7 @@ function Register(){
             Register
         </button>
         </form>
-        </>
+        </div>
     )
 }
 export default Register;

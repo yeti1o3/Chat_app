@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import '../styles/Login.css'
 import axios from 'axios';
 function Login() {
     const[username,setUsername]=useState('');
@@ -11,7 +12,7 @@ function Login() {
 
     }
   return (
-    <div>
+    <div className='Login'>
         <h2>Login</h2>
         <form onSubmit={login}>
         <input placeholder="username" value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
