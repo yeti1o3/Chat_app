@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const converstaionSchema=new mongoose.Schema({
-    paticipants:[
+    participants:[
         {
             type:mongoose.Schema.Types.ObjectId,
             ref:"User",
