@@ -5,7 +5,7 @@ function Logout() {
   return (
     <div className="mt-auto">
       {!loading?(
-              <SlLogout className="w-6 h-6 text-white cursor-pointer"
+              <SlLogout className="w-6 h-6 text-white cursor-pointer mt-4 "
               onClick={logout}/>
       ):(<span className="loading loading-spinner"></span>)}
     </div>

@@ -11,7 +11,7 @@ function useLogin() {
     setLoading(true)
     try{
         const res=await axios.post("http://localhost:4000/api/auth/login",{username,password},{withCredentials:true});
-        const data= res;
+        const data= res.data;
         if(data.error){
             throw new Error(data.error)
         }
