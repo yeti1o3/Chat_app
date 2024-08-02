@@ -15,11 +15,11 @@ function useSignup() {
     if(data.error){
         throw new Error(data.error);
     }
-    console.log("here");
+
     localStorage.setItem("chat-user",JSON.stringify(data));
     setAuthUser(data);
   }catch(error){
-    toast.error(error.message);
+    toast.error(error.response.data.error);
   }finally{
     setLoading(false);
   }}
